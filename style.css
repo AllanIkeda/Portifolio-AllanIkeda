@@ -1,3 +1,23 @@
+.row{
+  text-align: center;
+}
+.botao-redes:hover{
+  background-color: #5f6568;
+  
+}
+.skills-links:hover{
+  background-color: #5f6568;
+}
+.skills-links{
+  background-color: gray;
+  color: white;
+  border-radius: 10%;
+  padding: 5px 8px;
+  display: inline-block;
+  margin: 10px 0;
+  transition: .3s ease;
+ 
+}
 
   .botao-redes{
     background-color: gray;
@@ -5,17 +25,19 @@
     border-radius: 10%;
     padding: 12px 18px;
     display: inline-block;
-    text-align: center;
     margin: 10px 0;
     transition: .3s ease;
+    
   }
 
   #full-name{
     text-align: center;
   }
+
   div{
     text-align: center;
   }
+  
   body{
     font-family: monospace;
     background-color: #364044;
