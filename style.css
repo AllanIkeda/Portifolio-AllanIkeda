@@ -1,5 +1,6 @@
 .row{
   text-align: center;
+  border: #99A8AD;
 }
 .botao-redes:hover{
   background-color: #5f6568;
@@ -8,7 +9,7 @@
 .skills-links:hover{
   background-color: #5f6568;
 }
-.skills-links{
+.skills-links {
   background-color: gray;
   color: white;
   border-radius: 10%;
@@ -16,7 +17,13 @@
   display: inline-block;
   margin: 10px 0;
   transition: .3s ease;
+  margin-left: 2%;
  
+}
+.skills-links a[href]{
+  color: black ;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
   .botao-redes{
@@ -33,10 +40,6 @@
   #full-name{
     text-align: center;
   }
-
-  div{
-    text-align: center;
-  }
   
   body{
     font-family: monospace;
@@ -44,10 +47,33 @@
     color: #99A8AD;
     font-size:x-large;
   }
-  h3 {
+  h3#softskills, h3#hardskills {
 text-align: center;
   }
  
-  /* ul:nth-child(1){
-    list-style-image: url(htmlicon.png);
-  }  */
+.top-border{
+  border: #99A8AD 5px solid;
+  /* width: 200px; */
+}
+/* div{
+  border: #99A8AD 5px solid;
+} */
+
+#foto-perfil{
+  float: left;
+  margin-left: 2%;
+  
+}
+.sobre-mim{
+  text-align: left;
+  margin-left: 250px;
+  border: #99A8AD 2px solid;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: 2%;
+}
+#cep{
+  text-align: right;
+  margin-right: 2%;
+  font-weight: bolder;
+}
