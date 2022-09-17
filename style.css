@@ -49,9 +49,12 @@
     background-color: #364044;
     color: #99A8AD;
     font-size:x-large;
+    margin: 16px;
   }
   h3#softskills, h3#hardskills {
-text-align: center;
+  text-align: center; 
+  display: flex;
+  
   }
  
 .top-border{
@@ -84,10 +87,9 @@ text-align: center;
   font-weight: bolder;
   margin-bottom: 0;
 }
-.lista-sskills{
-  border: #99A8AD 3px solid;
-}
-.lista-hskills{
-  border: #99A8AD 3px solid;
-  margin-top: 10px;
+
+.skills {
+  border: red 2px solid;
+  display: inline;
+  
 }
