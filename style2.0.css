@@ -1,0 +1,45 @@
+header{
+    background-color: rgb(95, 95, 95);
+    height: 5%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    font-family: monospace;
+    margin-top: 0;
+}
+
+#menu-top a{
+    
+    text-decoration: none;
+    color: white;
+    padding: 7px 20px;
+    background-color: rgb(95, 95, 95);
+}
+
+a#sobre-link:hover{
+    background-color: rgb(54, 54, 54);
+}
+
+a#habilidade-link:hover{
+    background-color: rgb(54, 54, 54);
+}
+
+a#contato-link:hover{
+    background-color: rgb(54, 54, 54);
+}
+#nome{
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    color: rgb(255, 255, 255);
+    font: normal bold 20px normal;
+    padding: 6px 20px;
+    margin-right: 100px;
+    
+}
+.iblock{
+    display: inline-block;
+}

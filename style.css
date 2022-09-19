@@ -18,7 +18,7 @@
   display: inline-block;
   margin: 10px ;
   transition: .3s ease;
-  margin-left: 2%;
+  
 
 }
 .skills-links a[href]{
@@ -27,36 +27,52 @@
   font-weight: bolder;
 
 }
-
-  .botao-redes{
-    background-color: gray;
-    border-radius: 10%;
-    padding: 12px 18px;
-    display: inline-block;
-    margin: 10px 0;
-    transition: .3s ease;
-    margin-bottom: 20px;
-    position: relative;
+.skills{
+  width: auto;
+  display: block;
+  height: auto;
+}
+ .lista-hskills {
+  width: 50%;
+  margin: 0;
+  float: right;
+  height: 100%;
+}
+.lista-sskills {
+  width: 50%;
+  margin: 0;
+ float: left;
+ height: 100%;
+}
+.botao-redes{
+  background-color: gray;
+  border-radius: 10%;
+  padding: 12px 18px;
+  display: inline-block;
+  margin: 10px 0;
+  transition: .3s ease;
+  margin-bottom: 20px;
+  position: relative;
     
-  }
+}
 
-  #full-name{
-    text-align: center;
-  }
-  
-  body{
-    font-family: monospace;
-    background-color: #364044;
-    color: #99A8AD;
-    font-size:x-large;
-    margin: 16px;
-  }
-  h3#softskills, h3#hardskills {
-  text-align: center; 
-  display: flex;
-  
-  }
- 
+#full-name{
+  text-align: center;
+}
+
+body{
+  font-family: monospace;
+  background-color: #364044;
+  color: #99A8AD;
+  font-size:x-large;
+  margin: 16px;
+}
+/* h3#softskills, h3#hardskills {
+text-align: center; 
+display: flex;
+
+} */
+
 .top-border{
   border: #99A8AD 5px solid;
   padding: 20px;
@@ -70,6 +86,7 @@
   float: left;
   margin-left: 2%;
   border: #5f6568 4px solid;
+  border-radius: 100%;
   
 }
 .sobre-mim{
@@ -88,8 +105,3 @@
   margin-bottom: 0;
 }
 
-.skills {
-  border: red 2px solid;
-  display: inline;
-  
-}
