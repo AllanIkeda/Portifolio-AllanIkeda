@@ -1,102 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allan Ikeda</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="style2.0.css">
+</head>
 
-  <body>
-    <!--head-->
-    <header>
-      <div class="top-border">
-        <h2 id="full-name">Allan Ikeda Lysenko Nunes da Silva</h2>
-                  
-        <!--Sobre mim-->
-        <img id="foto-perfil" src="foto bonita.jpg" alt="Foto de perfil" width="200px">
-
-        <div class="sobre-mim">
-            <h3>Sobre mim</h3>
-              <p>
-              </p>
+<body>
+    <header id="top-menu">
+        <div id="nome" class="iblock">Allan Ikeda</div>
+        <div id="top-botao" class="iblock">
+            <a id="sobre-link" href="">Sobre mim</a>
+            <a id="habilidade-link" href="">Habilidades</a>
+            <a id="contato-link" href="">Contato</a>
         </div>
-
-        <p id="cep">Porto Alegre-RS, Brasil</p>
-        <div class="row">
-          <div class="skills-links"> <a href="#hardskills">
-            <p>HardSkills</p></a>
-          </div>
-
-          <div class="skills-links"> <a href="#softskills">
-            <p>SoftSkills</p></a>
-          </div>
-        </div>  
-      </div>
     </header>
-     <br>
-
-    <!--redes-->
-    <div class="row">
-      <h3>Onde me encontrar</h3>
-
-      <div class="botao-redes">
-        <a href="https://github.com/AllanIkeda" target="_blank"><img src="/github.png" alt="iconeGITHUB" width="50px"></a>
-      </div>
-
-      <div class="botao-redes">
-        <a href="https://www.linkedin.com/in/allan-ikeda/" target="_blank"><img src="/linkedin_black_logo_icon_147114.png" alt="iconeLinkedin" width="50px"></a>
-      </div>
-
-     </div>
-
-    <br>
     
-    <div class="skills">
-      <!--softskills-->
-      <div class="lista-sskills">
+    <main>
+        <section class="sobre-mim">
+            <div  class="iblock">
+                <img id="foto-perfil" src="/foto bonita.jpg" alt="Foto do Allan">
+            </div>
 
-        <h3 id="softskills">Habilidades SoftSkills <img src="/softimage.png" alt="softskills image" width="45px"></h3>
-        
-          <!-- <ul>
-            <li>Comunicativo</li>
-            <li>Empático</li>
-            <li>Agilidade</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>  
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-          </ul> -->
+            <div class="eutxt iblock">
+                <h1>Sobre Mim</h1>
+                <p>Sempre aprendendo competencias novas, atualmente estou em tdansição de carreira para a área de desenvolvimento web (Full-Stack). <br>
+                Adoro tecnologia, foguetes e espaço (quero ver um humano em marte!).</p>
+            </div>
+            <pid="cep">Porto Alegre-RS, Brasil</p>
+        </section>
+        <section class="skills ">
+            <div id="hardskills" class="iblock">
+                <h2 id="titulo-h">HardSkills</h2>
+                <ul>
+                    <li>Microsoft Excel </li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>  
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                </ul>
+            </div>
 
-      </div> 
-      <br>
-      <!--Hardskills-->
-      <div class="lista-hskills">
+            <div id="softskills" class="iblock">
+                <h2 id="titulo-s">SoftSkills</h2>
+                
+                <ul>
+                    <li>Aprender a Aprender</li>
+                    <li>Comunicativo</li>
+                    <li>Empático</li>
+                    <li>Agilidade</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    <li>Loading...</li>  
+                    <li>Loading...</li>
+                    <li>Loading...</li>
+                    
+                </ul>
+            </div>
 
-        <h3 id="hardskills">Habilidades HardSkills <img src="pngegg.png" alt="hardkills image" width="45px"></h3>
+        </section>
+    </main>
+    <footer>
+        <section id="redes">
+             <h2>Onde me achar</h2>
+             <div class="botao-redes iblock">
+                <a href="https://github.com/AllanIkeda" target="_blank"><img src="/images/github.png" alt="iconeGITHUB" width="50px"></a>
+              </div>
         
-          <!-- <ul>
-            <li>Excel</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>
-            <li>Loading...</li>  
-            <li>Loading...</li>
-            <li>Loading...</li>
-          
-          
-          </ul> -->
-        
-        
-
-      </div>
-    </div>
-  </body>
+              <div class="botao-redes iblock">
+                <a href="https://www.linkedin.com/in/allan-ikeda/" target="_blank"><img src="/images/linkedin_black_logo_icon_147114.png" alt="iconeLinkedin" width="50px"></a>
+              </div>
+              <div class="botao-redes iblock">
+                <a href="mailto:allanikeda@outlook.com" target="_blank"><img src="/images/icone-outlook-noire.png" alt="icone outlook email" width="50px"></a>
+              </div>
+              <div class="botao-redes iblock">
+                <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5541992322667" target="_blank"><img src="/images/wppicone.png" alt="icone do whatsapp" width="50px"></a>
+              </div>
+        </section>
+    </footer>
+</body>
 </html>

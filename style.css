@@ -1,107 +1,114 @@
-.row{
-  text-align: center;
-  border: #99A8AD 3px solid;
-  
+/* HEADER */
+#top-menu{
+    background-color: rgb(95, 95, 95);
+    height: 7%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    padding: auto;
+    border: 1px solid black;
 }
-.botao-redes:hover{
-  background-color: #5f6568;
-  
-}
-.skills-links:hover{
-  background-color: #5f6568;
-}
-.skills-links {
-  background-color: gray;
-  color: white;
-  border-radius: 10%;
-  padding: 5px 8px;
-  display: inline-block;
-  margin: 10px ;
-  transition: .3s ease;
-  
 
+#top-botao a {
+    text-decoration: none;
+    color: white;
+    padding: 13px;
+    background-color: rgb(95, 95, 95);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 4px;
+    border: 1px solid black;
+  
 }
-.skills-links a[href]{
-  color: black ;
-  text-decoration: none;
-  font-weight: bolder;
 
+#top-botao a:hover{
+    background-color: rgb(54, 54, 54);
 }
-.skills{
-  width: auto;
-  display: block;
-  height: auto;
+
+#nome{
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    color: rgb(255, 255, 255);
+    font: normal bold 20px normal;
+    padding: 0px 20px 0 20px;
+    margin-right: 100px;
+    border: 1px solid black;
+    
 }
- .lista-hskills {
-  width: 50%;
-  margin: 0;
-  float: right;
-  height: 100%;
+.iblock{
+    display: inline-block;
 }
-.lista-sskills {
-  width: 50%;
-  margin: 0;
- float: left;
- height: 100%;
+/* BODY/MAIN */
+body{
+    font-family: monospace;
+    margin-top: 0;
+    background-color: grey;
+    border: 1px solid black;
 }
-.botao-redes{
-  background-color: gray;
-  border-radius: 10%;
-  padding: 12px 18px;
-  display: inline-block;
-  margin: 10px 0;
-  transition: .3s ease;
-  margin-bottom: 20px;
-  position: relative;
+
+.eutxt{
+    padding: 20px;
+    vertical-align:bottom ;
+    width: 50%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-bottom: 6%;
     
 }
 
-#full-name{
-  text-align: center;
-}
-
-body{
-  font-family: monospace;
-  background-color: #364044;
-  color: #99A8AD;
-  font-size:x-large;
-  margin: 16px;
-}
-/* h3#softskills, h3#hardskills {
-text-align: center; 
-display: flex;
-
-} */
-
-.top-border{
-  border: #99A8AD 5px solid;
-  padding: 20px;
-  /* width: 200px; */
-}
-/* div{
-  border: #99A8AD 5px solid;
-} */
-
 #foto-perfil{
-  float: left;
-  margin-left: 2%;
-  border: #5f6568 4px solid;
-  border-radius: 100%;
-  
+    width: 250px;
+    border-radius: 100%;
+    vertical-align: bottom;
+    border: 1px solid black;
+    
 }
 .sobre-mim{
-  text-align: left;
-  margin-left: 250px;
-  border: #99A8AD 2px solid;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-right: 2%;
-  
-}
-#cep{
-  text-align: right;
-  margin-right: 2%;
-  font-weight: bolder;
-  margin-bottom: 0;
+    padding-top: 6%;
+    border: 1px solid black;
 }
 
+.skills{
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+#softskills{
+    /* border: 1px solid rgb(236, 0, 0); */
+    /* margin-left: 10%; */
+    padding-left: 10%;
+}
+#hardskills{
+    /* border: 1px solid rgb(236, 0, 0); */
+    /* margin-right: 10%; */
+    padding-right: 10%;
+
+}
+#hardskills ul li{
+    text-align: left;
+}
+#softskills ul li{
+    text-align: left;
+}
+#titulo-s::after{
+    content: url(./softimage.png);
+}
+#titulo-h::after{
+    content: url(/hardimage.png);
+}
+#redes{
+    text-align: center;
+}
+.botao-redes{
+    background-color: rgb(156, 155, 155);
+    border-radius: 10%;
+    padding: 12px 18px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: .3s ease;
+    margin-bottom: 20px;
+    position: relative;
+}
+.botao-redes:hover{
+    background-color: #5f6568;
+  }
