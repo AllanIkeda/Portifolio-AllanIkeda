@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: allanikeda.github.io
+Token: 808bca084471888a323bcabe8a2d4141124aceaa0bcbcf17f9c31d6a6a294aba
