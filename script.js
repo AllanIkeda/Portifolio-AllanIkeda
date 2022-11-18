@@ -2,13 +2,15 @@ const sobrebtn = document.getElementById('sobrebtn');
 const homebtn = document.getElementById('Homebtn');
 const sobre = document.getElementById('about');
 const header = document.getElementById('header');
+const body = document.getElementsByTagName('body');
 const resumoInit = document.getElementById('resumoInit')
 const socialLinks = document.getElementById('socialLinks');
 const nav = document.getElementById('navbar');
 const flexb = document.getElementById('nome');
 const activeGreen = document.getElementsByClassName('active')
 const uls = nav.firstElementChild
-console.log(uls);
+const fotoHeader = document.getElementById('foto-header');
+console.log(body);
 const calcIdade = () => {
   const idadep = document.getElementById('idade');
   const data = new Date,
@@ -48,8 +50,11 @@ sobrebtn.addEventListener('click', () => {
   sobre.style.overflow = 'visible';
   sobre.style.opacity = '1';
   header.setAttribute('class', 'header-top');
+  body[0].classList.add('gif');
+  header.style.margin = '0';
   nav.classList.add('flexb')
   resumoInit.style.display = 'none';
+  fotoHeader.style.display = 'none';
   // resumoInit.style.opacity = '0';
   socialLinks.style.display = 'none';
   // socialLinks.style.opacity = '0';
@@ -64,8 +69,10 @@ homebtn.addEventListener('click', () => {
   sobre.style.overflow = 'hidden';
   sobre.style.opacity = '0';
   header.classList.remove('header-top');
+  header.style.margin = '25px';
   nav.classList.remove('flexb');
   resumoInit.style.display = 'block';
+  fotoHeader.style.display = 'block';
   // resumoInit.style.opacity = '1';
   socialLinks.style.display = 'flex';
   // socialLinks.style.opacity = '1';

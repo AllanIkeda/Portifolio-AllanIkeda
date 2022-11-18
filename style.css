@@ -9,7 +9,7 @@ body {
   body::before {
     content: "";
     position: fixed;
-    background: #040404 url("/images/foto bonita.jpg") top right no-repeat;
+    background: #040404 url(./images/33b30abc85f6725e0bc7b538d46762a0.gif) repeat ;
     filter: grayscale(100%);
     background-size: 100vh;
     left: 0;
@@ -17,6 +17,14 @@ body {
     top: 0;
     height: 100vh;
     z-index: -1;
+  }
+  .gif {
+    background-color: #040404 url(./images/33b30abc85f6725e0bc7b538d46762a0.gif) repeat ;
+    font-family: monospace;
+    /* background-color: #040404; */
+    color: #fff;
+    position: relative;
+    background: transparent;
   }
 
   @media (min-width: 1024px) {
@@ -54,7 +62,9 @@ header {
     align-items: center;
     z-index: 997;
     overflow-y: auto;
-    flex-wrap: wrap;
+    overflow-x: hidden;
+    background: transparent;
+    margin: 25px;
   }
 
   #header.header-top {
@@ -97,7 +107,6 @@ header {
     font-size: 24px;
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.8);
-    width: 50%;
   }
 
   #header h2 span {
@@ -146,12 +155,6 @@ header {
 
     #header .social-links {
       margin-top: 15px;
-    }
-
-    #header .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
   }
 
