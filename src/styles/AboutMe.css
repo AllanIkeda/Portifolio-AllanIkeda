@@ -1,0 +1,114 @@
+
+  article {
+    /* overflow: hidden; */
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    bottom: 100%;
+    opacity: 0;
+    transition: ease-in-out 0.4s;
+    z-index: 2;
+  }
+
+  article.section-show {
+    top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+  }
+
+  article .container {
+    background: rgba(33, 49, 38, 0.315);
+    padding: 30px;
+    padding: 30px;
+    color: #ffffff;
+  }
+
+  .about-me .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #18d26e;
+  }
+
+  .about-me .content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .about-me .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-me .content ul strong {
+    margin-right: 10px;
+  }
+
+  .about-me .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #18d26e;
+    line-height: 0;
+  }
+
+  .about-me .content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .imgSobre {
+    width: 356px;
+  }
+
+  .imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* skills */
+
+  .skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+  }
+
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+
+  .skills .progress-bar-wrap {
+    background: rgba(206, 198, 198, 0.2);
+  }
+
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #18d26e;
+  }
+.skills-content1 {grid-area: left;}
+.skills-content2 {grid-area: right;}
+  #gradeSkill {
+    display: grid;
+    grid-template-areas:
+    'right left'
+  }
+
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
