@@ -17,10 +17,11 @@ class Navbar extends Component {
     // const { homebtn, sobrebtn, contatobtn } = this.state;
     // console.log('primeiro', sobrebtn);
     if (target.className.includes('active')) {
-      return target.className;
+      return;
     } else {
       switch (target.id) {
         case 'sobrebtn':
+          console.log('sobrebtn')
           return (
             this.setState({
               sobrebtn: true,
@@ -30,6 +31,7 @@ class Navbar extends Component {
             })
           )
           case 'homebtn':
+            console.log('homebtn')
             return (
               this.setState({
                 homebtn: true,
@@ -39,6 +41,7 @@ class Navbar extends Component {
               })
             )
             case 'contatobtn':
+              console.log('contatobtn')
               return (
                 this.setState({
                   contatobtn: true,
@@ -77,9 +80,9 @@ class Navbar extends Component {
               id="homebtn"
               className={ homebtn ? active : navLink}
               href="/"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
                 dispatch(changeClass(sobrebtn))
+                this.changeeClass(e);
             }}
             >
               Home
@@ -89,8 +92,8 @@ class Navbar extends Component {
             <button
               className={ projetosbtn ? active : navLink}
               id="projetosbtn"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
+                this.changeeClass(e);
                 dispatch(changeClass(sobrebtn))//colocar projetobtn
             }}
             >
@@ -101,9 +104,9 @@ class Navbar extends Component {
             <button
               className={ sobrebtn ? active : navLink}
               id="sobrebtn"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
                 dispatch(changeClass(sobrebtn))
+                this.changeeClass(e);
             }}
             >
               Sobre
@@ -115,9 +118,9 @@ class Navbar extends Component {
           <li>
             <button
               className={ contatobtn ? active : navLink}
-              onClick={ async (e) => {
-                await this.changeeClass(e);
-                await dispatch(changeClass(sobrebtn, contatobtn))
+              onClick={ (e) => {
+                this.changeeClass(e);
+                dispatch(changeClass(sobrebtn, contatobtn))
             }}
               id="contatobtn"
             >
@@ -145,8 +148,8 @@ class Navbar extends Component {
               id="homebtn"
               className={ homebtn ? active : navLink}
               href="/"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
+                this.changeeClass(e);
                 dispatch(changeClass(sobrebtn))
             }}
             >
@@ -156,8 +159,8 @@ class Navbar extends Component {
               {/* <button
               className={ projetosbtn ? active : navLink}
               id="projetosbtn"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
+                this.changeeClass(e);
                 dispatch(changeClass(sobrebtn))//colocar projetobtn
             }}
             >
@@ -167,8 +170,8 @@ class Navbar extends Component {
             <button
               className={ sobrebtn ? active : navLink}
               id="sobrebtn"
-              onClick={ async (e) => {
-                await this.changeeClass(e);
+              onClick={ (e) => {
+                this.changeeClass(e);
                 dispatch(changeClass(sobrebtn))
             }}
             >
@@ -177,9 +180,9 @@ class Navbar extends Component {
             <br />
             <button
               className={ contatobtn ? active : navLink}
-              onClick={ async (e) => {
-                await this.changeeClass(e);
-                await dispatch(changeClass(sobrebtn))
+              onClick={ (e) => {
+                this.changeeClass(e);
+                dispatch(changeClass(sobrebtn))
             }}
               id="contatobtn"
             >
@@ -191,12 +194,11 @@ class Navbar extends Component {
     )
   }
 }
-const mapStateToProps = (globalState) => {
-  const { sobrebtn } = globalState.reducer;
-  console.log(sobrebtn);
-  return {
-    sobrebtn,
-  }
-}
+// const mapStateToProps = (globalState) => {
+//   const { sobrebtn } = globalState.reducer;
+//   return {
+//     sobrebtn,
+//   }
+// }
 
-export default connect(mapStateToProps)(Navbar);
+export default connect()(Navbar);
