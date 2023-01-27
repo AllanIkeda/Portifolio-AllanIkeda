@@ -100,14 +100,24 @@
     transition: 0.9s;
     background-color: #18d26e;
   }
+
 .skills-content1 {grid-area: left;}
 .skills-content2 {grid-area: right;}
   #gradeSkill {
     display: grid;
     grid-template-areas:
     'right left'
+
   }
 
+  @media (max-width: 767px) {
+    #gradeSkill {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
   .col-lg-6 {
     flex: 0 0 auto;
     width: 80%;

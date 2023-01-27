@@ -47,15 +47,15 @@ class Navbar extends Component {
                   projetosbtn: false,
                 })
               )
-              case 'projetosbtn':
-                return (
-                  this.setState({
-                    projetosbtn: true,
-                    homebtn: false,
-                    contatobtn: false,
-                    sobrebtn: false,
-                  })
-                )
+              // case 'projetosbtn':
+              //   return (
+              //     this.setState({
+              //       projetosbtn: true,
+              //       homebtn: false,
+              //       contatobtn: false,
+              //       sobrebtn: false,
+              //     })
+              //   )
 
         default:
           break;
@@ -66,7 +66,7 @@ class Navbar extends Component {
   }
 
   render() {
-    const { navLink, active, homebtn, sobrebtn, contatobtn, projetosbtn } = this.state;
+    const { navLink, active, homebtn, sobrebtn, contatobtn } = this.state;
     const { dispatch } = this.props;
 
     return (
@@ -85,7 +85,7 @@ class Navbar extends Component {
               Home
               </button>
           </li>
-          <li>
+          {/* <li>
             <button
               className={ projetosbtn ? active : navLink}
               id="projetosbtn"
@@ -96,7 +96,7 @@ class Navbar extends Component {
             >
               Projetos
             </button>
-          </li>
+          </li> */}
           <li>
             <button
               className={ sobrebtn ? active : navLink}
@@ -117,7 +117,7 @@ class Navbar extends Component {
               className={ contatobtn ? active : navLink}
               onClick={ async (e) => {
                 await this.changeeClass(e);
-                await dispatch(changeClass(sobrebtn))
+                await dispatch(changeClass(sobrebtn, contatobtn))
             }}
               id="contatobtn"
             >
@@ -125,7 +125,68 @@ class Navbar extends Component {
             </button>
           </li>
           </ul>
-        <i className="bi bi-list mobile-nav-toggle"></i>
+          <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              className="bi bi-list mobile-nav-toggle"
+              // onClick={ this.toggleOptions }
+            />
+          </button>
+
+          <div className="offcanvasBg offcanvas offcanvas-end"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div className="offcanvas-header bgBlack">
+              <h5 className="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+              <button type="button" className="btn-close CorClose" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body listaBtn">
+            <button
+              id="homebtn"
+              className={ homebtn ? active : navLink}
+              href="/"
+              onClick={ async (e) => {
+                await this.changeeClass(e);
+                dispatch(changeClass(sobrebtn))
+            }}
+            >
+              Home
+              </button>
+              <br />
+              {/* <button
+              className={ projetosbtn ? active : navLink}
+              id="projetosbtn"
+              onClick={ async (e) => {
+                await this.changeeClass(e);
+                dispatch(changeClass(sobrebtn))//colocar projetobtn
+            }}
+            >
+              Projetos
+            </button>
+            <br /> */}
+            <button
+              className={ sobrebtn ? active : navLink}
+              id="sobrebtn"
+              onClick={ async (e) => {
+                await this.changeeClass(e);
+                dispatch(changeClass(sobrebtn))
+            }}
+            >
+              Sobre
+            </button>
+            <br />
+            <button
+              className={ contatobtn ? active : navLink}
+              onClick={ async (e) => {
+                await this.changeeClass(e);
+                await dispatch(changeClass(sobrebtn))
+            }}
+              id="contatobtn"
+            >
+              Contato
+            </button>
+            </div>
+          </div>
       </nav>
     )
   }
