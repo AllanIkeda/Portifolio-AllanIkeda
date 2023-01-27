@@ -20,7 +20,7 @@ class Header extends Component {
        className={ sobrebtn ? className : ''}
        >
         <div id="nome" className="container" width="50">
-          <h1><a href="https://allanikeda.github.io/">Allan Ikeda</a></h1>
+          <h1><a href="https://allanikeda-github-io-allanikeda.bohr.io/">Allan Ikeda</a></h1>
           <h2
             id="resumoInit"
             className={ sobrebtn ? 'displayNone' : ''}

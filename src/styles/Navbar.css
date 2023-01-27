@@ -1,4 +1,9 @@
 /* navbar */
+.offcanvasBg, .listaBtn, .bgBlack {
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+}
+
 navbar {
   padding: 0;
   margin-top: 35px;
