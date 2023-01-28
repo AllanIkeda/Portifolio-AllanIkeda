@@ -70,7 +70,6 @@ class Navbar extends Component {
 
   render() {
     const { navLink, active, homebtn, sobrebtn, contatobtn } = this.state;
-    console.log(sobrebtn);
     const { dispatch } = this.props;
 
     return (
@@ -82,8 +81,8 @@ class Navbar extends Component {
               className={ homebtn ? active : navLink}
               href="/"
               onClick={ (e) => {
+                dispatch(changeClass(sobrebtn))
                 this.changeeClass(e);
-                dispatch(changeClass(false));
             }}
             >
               Home
@@ -106,8 +105,8 @@ class Navbar extends Component {
               className={ sobrebtn ? active : navLink}
               id="sobrebtn"
               onClick={ (e) => {
+                dispatch(changeClass(sobrebtn))
                 this.changeeClass(e);
-                dispatch(changeClass(true));
             }}
             >
               Sobre
@@ -121,7 +120,7 @@ class Navbar extends Component {
               className={ contatobtn ? active : navLink}
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(false, true));
+                dispatch(changeClass(sobrebtn, contatobtn))
             }}
               id="contatobtn"
             >
@@ -139,7 +138,7 @@ class Navbar extends Component {
             />
           </button>
 
-          <div className="offcanvasBg offcanvas offcanvas-end" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div className="offcanvasBg offcanvas offcanvas-end"  tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div className="offcanvas-header bgBlack">
               <h5 className="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
               <button type="button" className="btn-close CorClose" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -151,7 +150,7 @@ class Navbar extends Component {
               href="/"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(sobrebtn))
             }}
             >
               Home
@@ -173,7 +172,7 @@ class Navbar extends Component {
               id="sobrebtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(sobrebtn))
             }}
             >
               Sobre
@@ -183,7 +182,7 @@ class Navbar extends Component {
               className={ contatobtn ? active : navLink}
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(sobrebtn))
             }}
               id="contatobtn"
             >
