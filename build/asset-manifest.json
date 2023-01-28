@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2acc0679.css",
+    "main.js": "/static/js/main.a8e0a7ad.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "static/media/foto bonita.jpg": "/static/media/foto bonita.df0f1820d095e9678c0b.jpg",
+    "index.html": "/index.html",
+    "main.2acc0679.css.map": "/static/css/main.2acc0679.css.map",
+    "main.a8e0a7ad.js.map": "/static/js/main.a8e0a7ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2acc0679.css",
+    "static/js/main.a8e0a7ad.js"
+  ]
+}
