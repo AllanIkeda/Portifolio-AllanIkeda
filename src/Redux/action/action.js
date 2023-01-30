@@ -1,10 +1,10 @@
 export const CHANGE_CLASS = 'CHANGE_CLASS';
 
-export const changeClass = (sobre, contato) => ({
+export const changeClass = (sobre, projeto) => (
+  {
   type: CHANGE_CLASS,
   payload: {
     sobre: sobre,
-    contato: contato,
-
+    projeto: projeto,
   }
 })

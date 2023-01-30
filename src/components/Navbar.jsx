@@ -16,12 +16,12 @@ class Navbar extends Component {
   changeeClass = ({target}) => {
     // const { homebtn, sobrebtn, contatobtn } = this.state;
     // console.log('primeiro', sobrebtn);
+    console.log(target);
     if (target.className.includes('active')) {
       return;
     } else {
       switch (target.id) {
         case 'sobrebtn':
-          console.log('sobrebtn')
           return (
             this.setState({
               sobrebtn: true,
@@ -31,7 +31,6 @@ class Navbar extends Component {
             })
           )
           case 'homebtn':
-            console.log('homebtn')
             return (
               this.setState({
                 homebtn: true,
@@ -40,26 +39,15 @@ class Navbar extends Component {
                 projetosbtn: false,
               })
             )
-            case 'contatobtn':
-              console.log('contatobtn')
+            case 'projetosbtn':
               return (
                 this.setState({
-                  contatobtn: true,
+                  projetosbtn: true,
                   homebtn: false,
                   sobrebtn: false,
-                  projetosbtn: false,
+                  contatobtn: false,
                 })
               )
-              // case 'projetosbtn':
-              //   return (
-              //     this.setState({
-              //       projetosbtn: true,
-              //       homebtn: false,
-              //       contatobtn: false,
-              //       sobrebtn: false,
-              //     })
-              //   )
-
         default:
           break;
       }
@@ -69,12 +57,11 @@ class Navbar extends Component {
   }
 
   render() {
-    const { navLink, active, homebtn, sobrebtn, contatobtn } = this.state;
-    console.log(sobrebtn);
+    const { navLink, active, homebtn, sobrebtn, projetosbtn } = this.state;
     const { dispatch } = this.props;
 
     return (
-      <nav id="navbar" className={`navbar ${sobrebtn ? 'flexb' : ''}`}>
+      <nav id="navbar" className={`navbar ${sobrebtn || projetosbtn ? 'flexb' : ''}`}>
         <ul>
           <li>
           <button
@@ -83,31 +70,31 @@ class Navbar extends Component {
               href="/"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(false));
+                dispatch(changeClass(false, false));
             }}
             >
               Home
               </button>
           </li>
-          {/* <li>
+          <li>
             <button
               className={ projetosbtn ? active : navLink}
               id="projetosbtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn))//colocar projetobtn
+                dispatch(changeClass(false, true))//colocar projetobtn
             }}
             >
               Projetos
             </button>
-          </li> */}
+          </li>
           <li>
             <button
               className={ sobrebtn ? active : navLink}
               id="sobrebtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(true));
+                dispatch(changeClass(true, false));
             }}
             >
               Sobre
@@ -116,7 +103,7 @@ class Navbar extends Component {
           {/* <li><a className="nav-link" href="#resume">Resume</a></li> */}
           {/* <li><a className="nav-link" href="#services">Services</a></li> */}
           <li><a className="nav-link" target="_blank" href="https://github.com/AllanIkeda/allanikeda.github.io" rel="noreferrer">Portfólio Code</a></li>
-          <li>
+          {/* <li>
             <button
               className={ contatobtn ? active : navLink}
               onClick={ (e) => {
@@ -127,7 +114,7 @@ class Navbar extends Component {
             >
               Contato
             </button>
-          </li>
+          </li> */}
           </ul>
           <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <i
@@ -151,44 +138,44 @@ class Navbar extends Component {
               href="/"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(false, false));
             }}
             >
               Home
               </button>
               <br />
-              {/* <button
+              <button
               className={ projetosbtn ? active : navLink}
               id="projetosbtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn))//colocar projetobtn
+                dispatch(changeClass(false, true))//colocar projetobtn
             }}
             >
               Projetos
             </button>
-            <br /> */}
+            <br />
             <button
               className={ sobrebtn ? active : navLink}
               id="sobrebtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(true, false));
             }}
             >
               Sobre
             </button>
             <br />
-            <button
+            {/* <button
               className={ contatobtn ? active : navLink}
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(sobrebtn));
+                dispatch(changeClass(false, true));
             }}
               id="contatobtn"
             >
               Contato
-            </button>
+            </button> */}
             </div>
           </div>
       </nav>
