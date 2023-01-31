@@ -12,36 +12,37 @@ class Header extends Component {
   }
   //receber o state Global
   render() {
-    const { sobrebtn, projeosbtn } = this.props;
+    const { sobrebtn, projetosbtn } = this.props;
+    console.log(projetosbtn);
     const { className } = this.state;
     return (
       <header
        id='header'
-       className={ sobrebtn || projeosbtn ? className : ''}
+       className={ sobrebtn || projetosbtn ? className : ''}
        >
         <div id="nome" className="container" width="50">
           <h1><a href="https://allanikeda-github-io-allanikeda.bohr.io/">Allan Ikeda</a></h1>
           <h2
             id="resumoInit"
-            className={ sobrebtn || projeosbtn ? 'displayNone' : ''}
+            className={ sobrebtn || projetosbtn ? 'displayNone' : ''}
             >
               Sou um Estudante de desenvolvimento Web <span>FullStack</span></h2>
           <Navbar />
-          {sobrebtn || projeosbtn ? '' : (
+          {sobrebtn || projetosbtn ? '' : (
             <FindMe />
           )}
         </div>
-      <img src={imgUser} className={`rounded-circle imgHome ${sobrebtn || projeosbtn ? 'displayNone' : ''}`} width="400px" alt="" />
+      <img src={imgUser} className={`rounded-circle imgHome ${sobrebtn || projetosbtn ? 'displayNone' : ''}`} width="400px" alt="" />
       </header>
     )
   }
 }
 
 const mapStateToProps = (globalState) => {
-  const { sobrebtn, projeosbtn } = globalState.reducer;
+  const { sobrebtn, projetosbtn } = globalState.reducer;
   return {
     sobrebtn,
-    projeosbtn,
+    projetosbtn,
   }
 }
 

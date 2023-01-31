@@ -134,3 +134,35 @@ header {
 .imgHome{
   align-self: center;
 }
+
+#socialLinks {
+  position: relative;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.greenArrow > img {
+  width: 27px;
+  position: absolute;
+  right: 0;
+  animation: MoveUpDown 1s cubic-bezier(0.99, 0.96, 0, -0.03) infinite;
+}
+
+#arrow1 {
+  width: 27px;
+  top: 63px;
+  left: 102px;
+}
+
+#arrow2 {
+  width: 27px;
+  top: 63px;
+  left: 151px;
+}

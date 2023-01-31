@@ -15,8 +15,6 @@ class Navbar extends Component {
 
   changeeClass = ({target}) => {
     // const { homebtn, sobrebtn, contatobtn } = this.state;
-    // console.log('primeiro', sobrebtn);
-    console.log(target);
     if (target.className.includes('active')) {
       return;
     } else {
@@ -48,6 +46,15 @@ class Navbar extends Component {
                   contatobtn: false,
                 })
               )
+              case 'contatobtn':
+                return (
+                  this.setState({
+                    contatobtn: true,
+                    projetosbtn: false,
+                    homebtn: false,
+                    sobrebtn: false,
+                  })
+                )
         default:
           break;
       }
@@ -57,7 +64,7 @@ class Navbar extends Component {
   }
 
   render() {
-    const { navLink, active, homebtn, sobrebtn, projetosbtn } = this.state;
+    const { navLink, active, homebtn, sobrebtn, projetosbtn, contatobtn } = this.state;
     const { dispatch } = this.props;
 
     return (
@@ -70,7 +77,7 @@ class Navbar extends Component {
               href="/"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(false, false));
+                dispatch(changeClass(false, false, false));
             }}
             >
               Home
@@ -82,7 +89,7 @@ class Navbar extends Component {
               id="projetosbtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(false, true))//colocar projetobtn
+                dispatch(changeClass(false, true, false))//colocar projetobtn
             }}
             >
               Projetos
@@ -94,7 +101,7 @@ class Navbar extends Component {
               id="sobrebtn"
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(true, false));
+                dispatch(changeClass(true, false, false));
             }}
             >
               Sobre
@@ -103,18 +110,18 @@ class Navbar extends Component {
           {/* <li><a className="nav-link" href="#resume">Resume</a></li> */}
           {/* <li><a className="nav-link" href="#services">Services</a></li> */}
           <li><a className="nav-link" target="_blank" href="https://github.com/AllanIkeda/allanikeda.github.io" rel="noreferrer">Portfólio Code</a></li>
-          {/* <li>
+          <li>
             <button
               className={ contatobtn ? active : navLink}
               onClick={ (e) => {
                 this.changeeClass(e);
-                dispatch(changeClass(false, true));
+                dispatch(changeClass(false, false, true));
             }}
               id="contatobtn"
             >
               Contato
             </button>
-          </li> */}
+          </li>
           </ul>
           <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
             <i
